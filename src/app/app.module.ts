@@ -3,14 +3,24 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MaterialModule} from './material/material.module';
+import {HttpClientModule} from '@angular/common/http';
+import { SpinereComponent } from './spinere/spinere.component';
+import {MatDividerModule} from '@angular/material/divider';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SpinereComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MaterialModule,
+    HttpClientModule,
+    MatDividerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

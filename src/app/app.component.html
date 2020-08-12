@@ -1,9 +1,20 @@
 
 
-<button (click)="getDataFromAPI()">Get Data</button>
-
-
-<mat-list>
-  <mat-list-item>Item 1</mat-list-item>
+<!-- <button (click)="getDataFromAPI()">Get Data</button> -->
+<app-spiner></app-spiner>
+<mat-toolbar color="primary" >
+  <mat-toolbar-row style="text-align: right;">
+    <span class="title-center" >Home</span>
+  </mat-toolbar-row>
+</mat-toolbar>
+<mat-list *ngFor="let d of data"  matRipple>
+  <mat-list-item>{{d.name}}
+    <span class="slot">
+      <mat-icon  matRipple onclick="user_album()"> navigate_next</mat-icon>
+    </span>
+  </mat-list-item>
   <mat-divider></mat-divider>
 </mat-list>
+
+<!-- <app-album></app-album> -->
+<app-photo></app-photo>

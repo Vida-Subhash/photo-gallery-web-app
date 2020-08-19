@@ -14,5 +14,7 @@ getData(): Observable<any> {
   return this.http.get<any>(url)
 }
 
+data() {
 
+}
 }

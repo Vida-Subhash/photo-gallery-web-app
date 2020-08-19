@@ -8,13 +8,13 @@
   </mat-toolbar-row>
 </mat-toolbar>
 <mat-list *ngFor="let d of data"  matRipple>
-  <mat-list-item>{{d.name}}
+  <mat-list-item routerLink="['/album', d.id]">{{d.name}}
     <span class="slot">
-      <mat-icon  matRipple onclick="user_album()"> navigate_next</mat-icon>
+      <mat-icon  matRipple (click)="UserClicked(d.id)"> navigate_next</mat-icon>
     </span>
   </mat-list-item>
   <mat-divider></mat-divider>
 </mat-list>
-
+<!-- <router-outlet></router-outlet> -->
 <!-- <app-album></app-album> -->
-<app-photo></app-photo>
+<!-- <app-photo></app-photo> -->
